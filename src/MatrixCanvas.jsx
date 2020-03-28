@@ -26,7 +26,7 @@ export default function MatrixCanvas(props) {
 			context.fillStyle = l_color;
 			context.font = font_size + "px";
 			let l_length = p_text.length;
-			for (var i = 0; i < columns; i++) {
+			for (let i = 0; i < columns; i++) {
 				let l_cur_char = p_text.charAt(Math.floor(Math.random() * l_length));
 				context.fillText(l_cur_char, i * font_size, drop[i] * font_size);/*get 0 and 1*/
 				if (drop[i] * font_size > (matrix.height * 2 / 3) && Math.random() > 0.85)/*reset*/
@@ -49,8 +49,7 @@ export default function MatrixCanvas(props) {
 		props.textAlternateColorList,
 	]); // Empty array ensures that effect is only run on mount and unmount
 
-	return <React.Fragment>
-	</React.Fragment>;
+	return <React.Fragment />;
 }
 
 MatrixCanvas.propTypes = {

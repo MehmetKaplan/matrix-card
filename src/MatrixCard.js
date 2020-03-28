@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import MatrixCanvas from './MatrixCanvas.jsx';
-// eslint-disable-next-line
 import MatrixCardDefaultStyles from './MatrixCardDefaultStyles.js';
 
 function MatrixCard(props) {
@@ -12,7 +13,7 @@ function MatrixCard(props) {
 	const l_containerStyle = { ...(MatrixCardDefaultStyles.container), ...(props.styleOverrideForContainerDiv ? props.styleOverrideForContainerDiv : {}) };
 	const l_childrenStyle = { ...(MatrixCardDefaultStyles.children), ...(props.styleOverrideForChildrenDiv ? props.styleOverrideForChildrenDiv : {}) };
 	const l_canvasStyle = { ...(MatrixCardDefaultStyles.canvas), ...(props.styleOverrideForCanvas ? props.styleOverrideForCanvas : {}) };
-	
+
 	return (
 		<div id={l_containerId}
 			style={l_containerStyle}
@@ -79,3 +80,18 @@ function useWindowSize() {
 }
 
 export default MatrixCard;
+
+MatrixCard.propTypes = {
+	id: PropTypes.string,
+	matrixText: PropTypes.string,
+	matrixCanvasId: PropTypes.string,
+	containerId: PropTypes.string,
+	backgroundColor: PropTypes.string,
+	textFontSize: PropTypes.string,
+	textMainColor: PropTypes.string,
+	textAlternateColorRatio: PropTypes.string,
+	textAlternateColorList: PropTypes.string,
+	styleOverrideForContainerDiv: PropTypes.object,
+	styleOverrideForChildrenDiv: PropTypes.object,
+	styleOverrideForCanvas: PropTypes.object,
+}

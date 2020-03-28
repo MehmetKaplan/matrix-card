@@ -8,20 +8,22 @@ yarn add matrix-card
 
 The easiest usage with all parameters is:
 ```javascript
-	 <MatrixCard
-	 	id={"my-id-123"}
-		cardHeight={window.innerHeight}
-		cardWidth={window.innerWidth}
-		matrixText={"ANIMATE ME"}
-		backgroundColor={"rgba(42, 40, 45, 0.2)"}
-		textFontSize={"16"}
-		textMainColor={"#A9A9A9"}
-		textAlternateColorRatio={0.1}
-		textAlternateColorList={["#808080", "#989898", "#A9A9A9", "#C0C0C0"]}
-		styleOverrideForContinerDiv={{ "min-height": "400vh", "color": "black",}}
-		styleOverrideForCanvas={ {"background-color": "#123456", }}
-		styleOverrideForChildrenDiv={{ "width": "80%", "top": "40px", }}
-	 />
+		<MatrixCard
+			id={"my-id-123"}
+			matrixText={"ANIMATE ME"}
+			backgroundColor={"rgba(42, 40, 45, 0.2)"}
+			textFontSize={"16"}
+			textMainColor={"#A9A9A9"}
+			textAlternateColorRatio={0.1}
+			textAlternateColorList={["#808080", "#989898", "#A9A9A9", "#C0C0C0"]}
+			styleOverrideForContinerDiv={{ "min-height": "400vh", "color": "black",}}
+			styleOverrideForCanvas={ {"background-color": "#123456", }}
+			styleOverrideForChildrenDiv={{ "width": "80%", "top": "40px", }}
+		>
+			<div>
+				This is a test div
+			</div>
+		</MatrixCard>
 ```
 
 ## API

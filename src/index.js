@@ -13,7 +13,7 @@ ReactDOM.render(
 			textMainColor={"#A9A9A9"}
 			textAlternateColorRatio={0.1}
 			textAlternateColorList={["#808080", "#989898", "#A9A9A9", "#C0C0C0"]}
-		>
+			>
 			<div>
 				This is a test div
 			</div>
