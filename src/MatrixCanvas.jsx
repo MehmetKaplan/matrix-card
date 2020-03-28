@@ -53,14 +53,14 @@ export default function MatrixCanvas(props) {
 }
 
 MatrixCanvas.propTypes = {
-	cardHeight: PropTypes.string,
-	cardWidth: PropTypes.string,
+	cardHeight: PropTypes.number,
+	cardWidth: PropTypes.number,
 	matrixText: PropTypes.string,
 	matrixCanvasId: PropTypes.string,
 	containerId: PropTypes.string,
 	backgroundColor: PropTypes.string,
 	textFontSize: PropTypes.string,
 	textMainColor: PropTypes.string,
-	textAlternateColorRatio: PropTypes.string,
-	textAlternateColorList: PropTypes.string,
+	textAlternateColorRatio: PropTypes.number,
+	textAlternateColorList: PropTypes.array,
 }
