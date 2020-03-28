@@ -12,7 +12,7 @@ function MatrixCard(props) {
 	const l_containerStyle = { ...(MatrixCardDefaultStyles.container), ...(props.styleOverrideForContainerDiv ? props.styleOverrideForContainerDiv : {}) };
 	const l_childrenStyle = { ...(MatrixCardDefaultStyles.children), ...(props.styleOverrideForChildrenDiv ? props.styleOverrideForChildrenDiv : {}) };
 	const l_canvasStyle = { ...(MatrixCardDefaultStyles.canvas), ...(props.styleOverrideForCanvas ? props.styleOverrideForCanvas : {}) };
-
+	
 	return (
 		<div id={l_containerId}
 			style={l_containerStyle}

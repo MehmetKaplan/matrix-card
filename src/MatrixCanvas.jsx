@@ -5,7 +5,7 @@ export default function MatrixCanvas(props) {
 	useEffect(() => {
 		const matrix = document.getElementById(props.matrixCanvasId);
 		const context = matrix.getContext("2d");
-		matrix.height = props.cardHeight * 2;
+		matrix.height = props.cardHeight;
 		matrix.width = props.cardWidth;
 		const drop = [];
 		const font_size = props.textFontSize;
@@ -34,23 +34,34 @@ export default function MatrixCanvas(props) {
 				drop[i]++;
 			}
 		}
-		setInterval(() => drawMatrix(props.matrixText), 40);
-	});
+		const l_intervalId = setInterval(() => drawMatrix(props.matrixText), 40);
+		return () => {clearInterval(l_intervalId)}
+	}, [
+		props.cardHeight,
+		props.cardWidth,
+		props.matrixText,
+		props.matrixCanvasId,
+		props.containerId,
+		props.backgroundColor,
+		props.textFontSize,
+		props.textMainColor,
+		props.textAlternateColorRatio,
+		props.textAlternateColorList,
+	]); // Empty array ensures that effect is only run on mount and unmount
 
 	return <React.Fragment>
 	</React.Fragment>;
 }
 
 MatrixCanvas.propTypes = {
-	id: PropTypes.string,
-	containerId: PropTypes.string,
+	cardHeight: PropTypes.string,
+	cardWidth: PropTypes.string,
 	matrixText: PropTypes.string,
+	matrixCanvasId: PropTypes.string,
+	containerId: PropTypes.string,
 	backgroundColor: PropTypes.string,
 	textFontSize: PropTypes.string,
 	textMainColor: PropTypes.string,
-	textAlternateColorRatio: PropTypes.number,
-	textAlternateColorList: PropTypes.object,
-	styleOverrideForContinerDiv: PropTypes.object,
-	styleOverrideForCanvas: PropTypes.object,
-	styleOverrideForChildrenDiv: PropTypes.object,
+	textAlternateColorRatio: PropTypes.string,
+	textAlternateColorList: PropTypes.string,
 }
