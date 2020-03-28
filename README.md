@@ -10,6 +10,8 @@ The easiest usage with all parameters is:
 ```javascript
 	 <MatrixCard
 	 	id={"my-id-123"}
+		cardHeight={window.innerHeight}
+		cardWidth={window.innerWidth}
 		matrixText={"ANIMATE ME"}
 		backgroundColor={"rgba(42, 40, 45, 0.2)"}
 		textFontSize={"16"}
@@ -27,6 +29,8 @@ The easiest usage with all parameters is:
 | Name | Description | Example |
 |------|-------------|---------|
 |  id  | The id of the div you want to use | my-id-123 | 
+|  width  | The absolute width of the card | window.innerWidth | 
+|  height  | The absolute height of the card | window.innerHeight | 
 |  matrixText  | The id of the div you want to use | ANIMATE ME | 
 |  backgroundColor  | The background color of the canvas where text will animate | "rgba(42, 40, 45, 0.2)" | 
 |  textFontSize  | The font size of the text that will animate | 16 | 

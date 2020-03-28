@@ -5,8 +5,8 @@ export default function MatrixCanvas(props) {
 	useEffect(() => {
 		const matrix = document.getElementById(props.matrixCanvasId);
 		const context = matrix.getContext("2d");
-		matrix.height = window.innerHeight * 2.5;
-		matrix.width = window.innerWidth;
+		matrix.height = props.cardHeight * 2;
+		matrix.width = props.cardWidth;
 		const drop = [];
 		const font_size = props.textFontSize;
 		const columns = matrix.width / font_size;
@@ -43,6 +43,7 @@ export default function MatrixCanvas(props) {
 
 MatrixCanvas.propTypes = {
 	id: PropTypes.string,
+	containerId: PropTypes.string,
 	matrixText: PropTypes.string,
 	backgroundColor: PropTypes.string,
 	textFontSize: PropTypes.string,
