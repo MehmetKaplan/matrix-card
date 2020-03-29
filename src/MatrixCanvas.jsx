@@ -34,12 +34,13 @@ export default function MatrixCanvas(props) {
 				drop[i]++;
 			}
 		}
-		const l_intervalId = setInterval(() => drawMatrix(props.matrixText), 40);
+		const l_intervalId = setInterval(() => drawMatrix(props.matrixText), props.delay);
 		return () => {clearInterval(l_intervalId)}
 	}, [
 		props.cardHeight,
 		props.cardWidth,
 		props.matrixText,
+		props.delay,
 		props.matrixCanvasId,
 		props.containerId,
 		props.backgroundColor,
@@ -56,6 +57,7 @@ MatrixCanvas.propTypes = {
 	cardHeight: PropTypes.number,
 	cardWidth: PropTypes.number,
 	matrixText: PropTypes.string,
+	delay: PropTypes.number,
 	matrixCanvasId: PropTypes.string,
 	containerId: PropTypes.string,
 	backgroundColor: PropTypes.string,

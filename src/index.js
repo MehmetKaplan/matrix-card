@@ -26,6 +26,7 @@ function MatrixCard(props) {
 				cardHeight={l_size.height}
 				cardWidth={l_size.width}
 				matrixText={`${props.matrixText} `}
+				delay={props.delay}
 				matrixCanvasId={l_canvasId}
 				containerId={l_containerId}
 				backgroundColor={props.backgroundColor}
@@ -84,6 +85,7 @@ export default MatrixCard;
 MatrixCard.propTypes = {
 	id: PropTypes.string,
 	matrixText: PropTypes.string,
+	delay: PropTypes.number,
 	matrixCanvasId: PropTypes.string,
 	containerId: PropTypes.string,
 	backgroundColor: PropTypes.string,
