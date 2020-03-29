@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/matrix-card/static/css/main.2c6a48fe.chunk.css",
-    "main.js": "/matrix-card/static/js/main.6506bc97.chunk.js",
-    "main.js.map": "/matrix-card/static/js/main.6506bc97.chunk.js.map",
+    "main.js": "/matrix-card/static/js/main.08adf8c8.chunk.js",
+    "main.js.map": "/matrix-card/static/js/main.08adf8c8.chunk.js.map",
     "runtime-main.js": "/matrix-card/static/js/runtime-main.7040b499.js",
     "runtime-main.js.map": "/matrix-card/static/js/runtime-main.7040b499.js.map",
     "static/js/2.3bba2541.chunk.js": "/matrix-card/static/js/2.3bba2541.chunk.js",
     "static/js/2.3bba2541.chunk.js.map": "/matrix-card/static/js/2.3bba2541.chunk.js.map",
     "index.html": "/matrix-card/index.html",
-    "precache-manifest.56e2d3fbdba6cb37be410acf4e09c1aa.js": "/matrix-card/precache-manifest.56e2d3fbdba6cb37be410acf4e09c1aa.js",
+    "precache-manifest.92d00f84e8a3b4ed1804c7f40f4c3bf9.js": "/matrix-card/precache-manifest.92d00f84e8a3b4ed1804c7f40f4c3bf9.js",
     "service-worker.js": "/matrix-card/service-worker.js",
     "static/css/main.2c6a48fe.chunk.css.map": "/matrix-card/static/css/main.2c6a48fe.chunk.css.map",
     "static/js/2.3bba2541.chunk.js.LICENSE.txt": "/matrix-card/static/js/2.3bba2541.chunk.js.LICENSE.txt",
-    "static/js/main.6506bc97.chunk.js.LICENSE.txt": "/matrix-card/static/js/main.6506bc97.chunk.js.LICENSE.txt"
+    "static/js/main.08adf8c8.chunk.js.LICENSE.txt": "/matrix-card/static/js/main.08adf8c8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7040b499.js",
     "static/js/2.3bba2541.chunk.js",
     "static/css/main.2c6a48fe.chunk.css",
-    "static/js/main.6506bc97.chunk.js"
+    "static/js/main.08adf8c8.chunk.js"
   ]
 }
