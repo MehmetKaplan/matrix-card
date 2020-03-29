@@ -1,59 +1,97 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import MatrixCard from './MatrixCard';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-ReactDOM.render(
-	<React.StrictMode>
-		<div style={{
-			position: "relative",
-			display: "flex",
-			flexDirection: "column",
-			alignItems: "center",
-		}}>
-			<div>
-				<MatrixCard
-					id={"my-id-1"}
-					matrixText={"ANIMATE ME"}
-					backgroundColor={"rgba(42, 40, 45, 0.2)"}
-					textFontSize={"16"}
-					textMainColor={"#A9A9A9"}
-					textAlternateColorRatio={0.1}
-					textAlternateColorList={["#808080", "#989898", "#A9A9A9", "#C0C0C0"]}
-				>
-					<div>
-						This is a test div
-					</div>
-				</MatrixCard>
-			</div>
-			<div>
-				Some random div
-			</div>
-			<div>
-				<MatrixCard
-					id={"my-id-2"}
-					matrixText={"ANIMATE ME 2"}
-					backgroundColor={"rgba(42, 40, 45, 0.2)"}
-					textFontSize={"16"}
-					textMainColor={"#A9A9A9"}
-					textAlternateColorRatio={0.1}
-					textAlternateColorList={["#808080", "#989898", "#A9A9A9", "#C0C0C0"]}
-					styleOverrideForContinerDiv={{ "color": "blue", }}
-					styleOverrideForCanvas={{ backgroundColor: "#00FF00" }}
-					styleOverrideForChildrenDiv={{ backgroundColor: "#FF00FF" }}
-				>
-					<div>
-						This is a test div 2
-					</div>
-				</MatrixCard>
-			</div>
-		</div>
-	</React.StrictMode>,
-	document.getElementById('root')
-);
+import MatrixCanvas from './MatrixCanvas.jsx';
+import MatrixCardDefaultStyles from './MatrixCardDefaultStyles.js';
 
-/*
-			styleOverrideForContinerDiv={{ "min-height": "400vh", "color": "black", }}
-			styleOverrideForCanvas={{ "background-color": "#123456", }}
-			styleOverrideForChildrenDiv={{ "width": "100%", "top": "40px", }}
-*/
+function MatrixCard(props) {
+
+	let l_size = useWindowSize();
+
+	const l_containerId = `container-${props.id}`;
+	const l_canvasId = `canvas-${props.id}`;
+	const l_containerStyle = { ...(MatrixCardDefaultStyles.container), ...(props.styleOverrideForContainerDiv ? props.styleOverrideForContainerDiv : {}) };
+	const l_childrenStyle = { ...(MatrixCardDefaultStyles.children), ...(props.styleOverrideForChildrenDiv ? props.styleOverrideForChildrenDiv : {}) };
+	const l_canvasStyle = { ...(MatrixCardDefaultStyles.canvas), ...(props.styleOverrideForCanvas ? props.styleOverrideForCanvas : {}) };
+
+	return (
+		<div id={l_containerId}
+			style={l_containerStyle}
+		>
+			<canvas
+				id={l_canvasId}
+				style={l_canvasStyle}
+			/>
+			<MatrixCanvas
+				cardHeight={l_size.height}
+				cardWidth={l_size.width}
+				matrixText={`${props.matrixText} `}
+				matrixCanvasId={l_canvasId}
+				containerId={l_containerId}
+				backgroundColor={props.backgroundColor}
+				textFontSize={props.textFontSize}
+				textMainColor={props.textMainColor}
+				textAlternateColorRatio={props.textAlternateColorRatio}
+				textAlternateColorList={props.textAlternateColorList}
+			/>
+			<div id={`children-${props.id}`}
+				style={l_childrenStyle}
+			>
+				{props.children}
+			</div>
+		</div >
+	);
+}
+
+// Hook
+function useWindowSize() {
+
+	const initialState = {
+		width: (typeof window === 'object') ? window.innerWidth : undefined,
+		height: (typeof window === 'object') ? window.innerHeight : undefined
+	};
+
+	const [windowSize, setWindowSize] = useState(initialState);
+
+	useEffect(() => {
+
+		const isClient = typeof window === 'object';
+
+		const getSize = () => {
+			return {
+				width: isClient ? window.innerWidth : undefined,
+				height: isClient ? window.innerHeight : undefined
+			};
+		}
+
+		if (!isClient) {
+			return false;
+		}
+
+		function handleResize() {
+			setWindowSize(getSize());
+		}
+
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []); // Empty array ensures that effect is only run on mount and unmount
+
+	return windowSize;
+}
+
+export default MatrixCard;
+
+MatrixCard.propTypes = {
+	id: PropTypes.string,
+	matrixText: PropTypes.string,
+	matrixCanvasId: PropTypes.string,
+	containerId: PropTypes.string,
+	backgroundColor: PropTypes.string,
+	textFontSize: PropTypes.string,
+	textMainColor: PropTypes.string,
+	textAlternateColorRatio: PropTypes.number,
+	textAlternateColorList: PropTypes.array,
+	styleOverrideForContainerDiv: PropTypes.object,
+	styleOverrideForChildrenDiv: PropTypes.object,
+	styleOverrideForCanvas: PropTypes.object,
+}
