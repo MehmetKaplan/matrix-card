@@ -23,6 +23,7 @@ const App = () => {
 				<MatrixCard
 					id={"my-id-1"}
 					matrixText={"ANIMATE ME"}
+					delay={40}
 					backgroundColor={"rgba(42, 40, 45, 0.2)"}
 					textFontSize={"16"}
 					textMainColor={"#A9A9A9"}
@@ -41,6 +42,7 @@ const App = () => {
 				<MatrixCard
 					id={"my-id-2"}
 					matrixText={"ANIMATE ME 2"}
+					delay={100}
 					backgroundColor={"rgba(0, 40, 0, 0.1)"}
 					textFontSize={"16"}
 					textMainColor={"#00FF00"}
