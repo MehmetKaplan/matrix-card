@@ -26,19 +26,19 @@ const App = () => {
 			</div>
 			<div>
 				Some random div
-		</div>
+			</div>
 			<div>
 				<MatrixCard
 					id={"my-id-2"}
 					matrixText={"ANIMATE ME 2"}
-					backgroundColor={"rgba(42, 40, 45, 0.2)"}
+					backgroundColor={"rgba(0, 40, 0, 0.1)"}
 					textFontSize={"16"}
-					textMainColor={"#A9A9A9"}
+					textMainColor={"#00FF00"}
 					textAlternateColorRatio={0.1}
-					textAlternateColorList={["#808080", "#989898", "#A9A9A9", "#C0C0C0"]}
+					textAlternateColorList={["#00F000", "#00EA00", "#00E000", "#00D600"]}
 					styleOverrideForContinerDiv={{ "color": "blue", }}
 					styleOverrideForCanvas={{ backgroundColor: "#00FF00" }}
-					styleOverrideForChildrenDiv={{ backgroundColor: "#FF00FF" }}
+					styleOverrideForChildrenDiv={{ backgroundColor: "#aa77aa" }}
 				>
 					<div>
 						This is a test div 2
