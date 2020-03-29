@@ -8,6 +8,11 @@ yarn add matrix-card
 
 In the below example 2 ```MatrixCard```s are stacked.
 ```javascript
+import React from 'react'
+import MatrixCard from 'matrix-card'
+
+const App = () => {
+	return (
 		<div style={{
 			position: "relative",
 			display: "flex",
@@ -26,12 +31,12 @@ In the below example 2 ```MatrixCard```s are stacked.
 				>
 					<div>
 						This is a test div
-					</div>
+							 </div>
 				</MatrixCard>
 			</div>
 			<div>
 				Some random div
-			</div>
+		</div>
 			<div>
 				<MatrixCard
 					id={"my-id-2"}
@@ -47,10 +52,13 @@ In the below example 2 ```MatrixCard```s are stacked.
 				>
 					<div>
 						This is a test div 2
-					</div>
+							 </div>
 				</MatrixCard>
 			</div>
 		</div>
+	)
+}
+export default App
 ```
 
 ## API
@@ -77,5 +85,6 @@ The license is MIT and full text [here](LICENSE).
 ### Used Modules
 
 * react license [here](./OtherLicenses/react.txt)
+* create-react-hook [here](./OtherLicenses/create-react-hook.txt)
 * react-scripts license [here](./OtherLicenses/react-scripts.txt)
 * matrix-rain-animation license [here](./OtherLicenses/matrix-rain-animation.txt)
