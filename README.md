@@ -37,9 +37,6 @@ const App = () => {
 				</MatrixCard>
 			</div>
 			<div>
-				Some random div
-			</div>
-			<div>
 				<MatrixCard
 					id={"my-id-2"}
 					matrixText={"ANIMATE ME 2"}
