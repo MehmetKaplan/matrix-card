@@ -17,5 +17,5 @@ yarn deploy
 
 Publish to npmjs.org:
 ```
-npm publish
+yarn publish
 ```
