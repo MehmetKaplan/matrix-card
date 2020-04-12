@@ -29,6 +29,7 @@ const App = () => {
 					textMainColor={"#A9A9A9"}
 					textAlternateColorRatio={0.1}
 					textAlternateColorList={["#808080", "#989898", "#A9A9A9", "#C0C0C0"]}
+					styleOverrideForContainerDiv={{ backgroundColor: "rgba(42, 40, 45)", }}
 				>
 					<div>
 						This is a test div
@@ -48,9 +49,9 @@ const App = () => {
 					textMainColor={"#00FF00"}
 					textAlternateColorRatio={0.1}
 					textAlternateColorList={["#00F000", "#00EA00", "#00E000", "#00D600"]}
-					styleOverrideForContinerDiv={{ "color": "blue", }}
+					styleOverrideForContainerDiv={{ backgroundColor: "#FEDC00", }}
 					styleOverrideForCanvas={{ backgroundColor: "#00FF00" }}
-					styleOverrideForChildrenDiv={{ backgroundColor: "#aa77aa" }}
+					styleOverrideForContainerDiv={{ backgroundColor: "rgba(0, 40, 0)", }}
 				>
 					<div>
 						This is a test div 2
@@ -79,7 +80,7 @@ The above code can be examined from here: https://mehmetkaplan.github.io/matrix-
 |  textMainColor  | The main color of the text that will animate | #A9A9A9" | 
 |  textAlternateColorRatio  | The ratio (should be <1) that alternate color is used | 0.1 | 
 |  textAlternateColorList  | The color list to use while animating the list | ["#808080", "#989898", "#A9A9A9", "#C0C0C0"] | 
-|  styleOverrideForContinerDiv  | Style override for container div. Refer to the `container` key in the `MatrixCardDefaultStyles.js` file to get the idea | { "min-height": "400vh", "color": "black",} |
+|  styleOverrideForContainerDiv  | Style override for container div. Refer to the `container` key in the `MatrixCardDefaultStyles.js` file to get the idea | { "min-height": "400vh", "color": "black",} |
 |  styleOverrideForCanvas  | Style override for the canvas where matrix animation plays. Refer to the `canvas` key in the `MatrixCardDefaultStyles.js` file to get the idea | { "background-color": "#123456", } |
 |  styleOverrideForChildrenDiv  | Style override for children area. Refer to the `children` key in the `MatrixCardDefaultStyles.js` file to get the idea | { "width": "80%", "top": "40px", } |
 

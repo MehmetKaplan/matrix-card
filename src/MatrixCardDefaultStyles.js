@@ -1,7 +1,7 @@
 export default {
 	container: {
 		position: "relative",
-		color: "white",
+		backgroundColor: "#FF3456"
 	},
 	canvas: {
 		zIndex: 2,

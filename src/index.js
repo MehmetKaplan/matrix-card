@@ -10,7 +10,7 @@ function MatrixCard(props) {
 
 	const l_containerId = `container-${props.id}`;
 	const l_canvasId = `canvas-${props.id}`;
-	const l_containerStyle = { ...(MatrixCardDefaultStyles.container), ...(props.styleOverrideForContainerDiv ? props.styleOverrideForContainerDiv : {}) };
+	const l_containerStyle = { ...(MatrixCardDefaultStyles.container), backgroundColor: props.backgroundColor, ...(props.styleOverrideForContainerDiv ? props.styleOverrideForContainerDiv : {}) };
 	const l_childrenStyle = { ...(MatrixCardDefaultStyles.children), ...(props.styleOverrideForChildrenDiv ? props.styleOverrideForChildrenDiv : {}) };
 	const l_canvasStyle = { ...(MatrixCardDefaultStyles.canvas), ...(props.styleOverrideForCanvas ? props.styleOverrideForCanvas : {}) };
 

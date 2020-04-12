@@ -19,6 +19,7 @@ const App = () => {
 					textMainColor={"#A9A9A9"}
 					textAlternateColorRatio={0.1}
 					textAlternateColorList={["#808080", "#989898", "#A9A9A9", "#C0C0C0"]}
+					styleOverrideForContainerDiv={{ backgroundColor: "rgba(42, 40, 45)", }}
 				>
 					<div>
 						This is a test div
@@ -38,9 +39,9 @@ const App = () => {
 					textMainColor={"#00FF00"}
 					textAlternateColorRatio={0.1}
 					textAlternateColorList={["#00F000", "#00EA00", "#00E000", "#00D600"]}
-					styleOverrideForContinerDiv={{ "color": "blue", }}
+					styleOverrideForContainerDiv={{ backgroundColor: "#FEDC00", }}
 					styleOverrideForCanvas={{ backgroundColor: "#00FF00" }}
-					styleOverrideForChildrenDiv={{ backgroundColor: "#aa77aa" }}
+					styleOverrideForContainerDiv={{ backgroundColor: "rgba(0, 40, 0)", }}
 				>
 					<div>
 						This is a test div 2
