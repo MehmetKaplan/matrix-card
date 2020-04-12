@@ -10,6 +10,11 @@ Upgrade version:
 yarn version --patch
 ```
 
+Publish to github.io:
+```
+yarn deploy
+```
+
 Publish to npmjs.org:
 ```
 npm publish
