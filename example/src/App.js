@@ -36,7 +36,6 @@ const App = () => {
 					textMainColor={"#00FF00"}
 					textAlternateColorRatio={0.1}
 					textAlternateColorList={["#00F000", "#00EA00", "#00E000", "#00D600"]}
-					styleOverrideForContainerDiv={{ backgroundColor: "#FEDC00", }}
 					styleOverrideForCanvas={{ backgroundColor: "#00FF00" }}
 					styleOverrideForContainerDiv={{ backgroundColor: "rgba(0, 40, 0)", }}
 				>
