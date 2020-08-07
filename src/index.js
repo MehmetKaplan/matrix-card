@@ -23,8 +23,8 @@ function MatrixCard(props) {
 				style={l_canvasStyle}
 			/>
 			<MatrixCanvas
-				cardHeight={l_size.height}
-				cardWidth={l_size.width}
+				cardHeight={props.canvasSize ? props.canvasSize.height : l_size.height}
+				cardWidth={props.canvasSize ? props.canvasSize.width : l_size.width}
 				matrixText={`${props.matrixText} `}
 				delay={props.delay}
 				matrixCanvasId={l_canvasId}
@@ -96,4 +96,5 @@ MatrixCard.propTypes = {
 	styleOverrideForContainerDiv: PropTypes.object,
 	styleOverrideForChildrenDiv: PropTypes.object,
 	styleOverrideForCanvas: PropTypes.object,
+	canvasSize: PropTypes.object,
 }
