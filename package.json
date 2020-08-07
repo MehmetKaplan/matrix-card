@@ -1,6 +1,6 @@
 {
 	"name": "matrix-card",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "React card with matrix style background",
 	"author": "MehmetKaplan",
 	"license": "MIT",
