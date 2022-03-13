@@ -48,8 +48,8 @@ function MatrixCard(props) {
 function useWindowSize() {
 
 	const initialState = {
-		width: (typeof window === 'object') ? window.innerWidth : undefined,
-		height: (typeof window === 'object') ? window.innerHeight : undefined
+		width: (typeof window === 'object') ? window.visualViewport.width : undefined,
+		height: (typeof window === 'object') ? window.visualViewport.height : undefined
 	};
 
 	const [windowSize, setWindowSize] = useState(initialState);
@@ -60,8 +60,8 @@ function useWindowSize() {
 
 		const getSize = () => {
 			return {
-				width: isClient ? window.innerWidth : undefined,
-				height: isClient ? window.innerHeight : undefined
+				width: isClient ? window.visualViewport.width : undefined,
+				height: isClient ? window.visualViewport.height : undefined
 			};
 		}
 

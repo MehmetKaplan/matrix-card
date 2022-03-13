@@ -68,7 +68,7 @@ The above code can be examined from here: https://mehmetkaplan.github.io/matrix-
 | Name | Description | Example |
 |------|-------------|---------|
 |  id  | The id of the div you want to use | my-id-123 | 
-|  canvasSize  | The absolute width and height of the card, if not provided window.innerWidth and window.innerHeight are used | canvasSize={{ width: '480', height: '270' }} | 
+|  canvasSize  | The absolute width and height of the card, if not provided window.visualViewport.width and window.visualViewport.height are used | canvasSize={{ width: '480', height: '270' }} | 
 |  matrixText  | The text you want to animate | ANIMATE ME | 
 |  backgroundColor  | The background color of the canvas where text will animate | "rgba(42, 40, 45, 0.2)" | 
 |  textFontSize  | The font size of the text that will animate | 16 | 
