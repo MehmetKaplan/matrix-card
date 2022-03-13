@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "24f692547dc3ffb23be4d8c1cc4d3e4f",
+    "revision": "adb485d8ee7cda1f0bc19b57589df35a",
     "url": "/matrix-card/index.html"
   },
   {
-    "revision": "8e4938da6d23fd8df7d8",
+    "revision": "84e5e2dc4fdb11563f55",
     "url": "/matrix-card/static/css/main.2c6a48fe.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/matrix-card/static/js/2.05dc4ec7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e4938da6d23fd8df7d8",
-    "url": "/matrix-card/static/js/main.26332707.chunk.js"
+    "revision": "84e5e2dc4fdb11563f55",
+    "url": "/matrix-card/static/js/main.a4d4f082.chunk.js"
   },
   {
     "revision": "d4b9583852996254d9a5b908c50798f8",
-    "url": "/matrix-card/static/js/main.26332707.chunk.js.LICENSE.txt"
+    "url": "/matrix-card/static/js/main.a4d4f082.chunk.js.LICENSE.txt"
   },
   {
     "revision": "b0eee60596a6fe1f8b29",
